@@ -16,11 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "moment": "^2.16.0",
-    "probot": "^7.2.0",
-    "aws-sdk": "2.481.0",
-    "aws-sdk-mock": "4.4.0",
-    "@probot/serverless-lambda": "^0.3.0"
+    "moment": "^2.16.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
