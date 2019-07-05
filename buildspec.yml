@@ -10,7 +10,7 @@ containers:
                 commands:
                     - npm install
                     - ls $CODEBUILD_SRC_DIR
-                    - find $CODEBUILD_SRC_DIR/node_modules -mtime +10950 -exec touch {} ;
+                    - find $CODEBUILD_SRC_DIR/node_modules -mtime +10950 -exec touch {} \ ;
                     - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template post-saml.yaml
         artifacts:
             files:
