@@ -1,13 +1,56 @@
 {
   "name": "aws-serverless-samfarm-api-demo",
   "version": "1.0.0",
-  "dependencies": {
-    "moment": "^2.16.0"
-  },
-  "description": "Sam Farm lambda function for Re:Invent 2016 Serverless miniconf",
-  "main": "index.js",
+  "description": "A Probot app",
+  "author": "Hitesh Sharma <hitshar@amazon.com>",
+  "license": "ISC",
+  "repository": "https://github.com//aws-java-sdk-github-bot.git",
+  "homepage": "https://github.com//aws-java-sdk-github-bot",
+  "bugs": "https://github.com//aws-java-sdk-github-bot/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
-  "author": "roryj@amazon.com"
+  "dependencies": {
+    "moment": "^2.16.0",
+    "probot": "^7.2.0",
+    "aws-sdk": "2.481.0",
+    "aws-sdk-mock": "4.4.0",
+    "@probot/serverless-lambda": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.0.0",
+    "nock": "^10.0.0",
+    "nodemon": "^1.17.2",
+    "serverless-offline": "^5.5.0",
+    "smee-client": "^1.0.2",
+    "standard": "^12.0.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
