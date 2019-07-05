@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "moment": "^2.16.0",
-    "probot": "^7.2.0"
+    "aws-sdk": "2.481.0",
+    "aws-sdk-mock": "4.4.0"
   },
   "engines": {
     "node": ">= 8.3.0"
