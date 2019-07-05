@@ -1,0 +1,28 @@
+Transform: 'AWS::Serverless-2016-10-31'
+Parameters:
+    SamMultipler:
+        Description: "SAM multiplier. Make this really big to have a party :)"
+        Type: "String"
+    OriginUrl:
+        Description: "The origin url to allow CORS requests from. This will be the base URL of your static SAM website."
+        Type: "String"
+Resources:
+    Router:
+        Type: AWS::Serverless::Function
+        Properties:
+            Handler: handler.probot
+            Runtime: nodejs8.10
+            CodeUri: ./
+            Environment:
+                Variables:
+                    SAM_MULTIPLIER: !Ref SamMultipler
+                    ORIGIN_URL: !Ref OriginUrl
+                    WEBHOOK_SECRET: secret
+                    APP_ID: 34289
+                    LOG_FORMAT: json
+            Events:
+              GetResource:
+                Type: Api
+                Properties:
+                  Path: /probot
+                  Method: post
