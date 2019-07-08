@@ -20,6 +20,9 @@ Resources:
                     WEBHOOK_SECRET: secret
                     APP_ID: 34289
                     LOG_FORMAT: json
+                    PRIVATE_KEY_PATH: https://serverless-pipeline-cloud-formation-stack-yaml-files.s3.us-east-2.amazonaws.com/lambda-deployed-app-2.2019-06-28.private-key.pem
+                    LOG_LEVEL: debug
+                    WEBHOOK_PROXY_URL: https://smee.io/cD160UBBOExc2UC/
             Events:
               GetResource:
                 Type: Api
