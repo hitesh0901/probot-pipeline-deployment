@@ -4,3 +4,4 @@ package-lock.json
 *.pem
 credentials.json
 remove
+pem-file

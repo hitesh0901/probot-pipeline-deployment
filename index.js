@@ -50,7 +50,7 @@ module.exports = app => {
       commentBody = commentBody + config.comments.missingCLAMessage;
     }
     customComment.body = commentBody;
-    context.github.issues.createComment(customComment);
+    return context.github.issues.createComment(customComment);
 
     /* Assign Reviewer */
     // assignReviewer(context);
